@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CITA255___Assignment_3.SightPotionPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Sight Potion">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Sight Enchancement Potion" FontSize="28" />
+        <Label Text="$24.99" FontSize="22" />
+
+        <Label Text="How many would you like to purchase, traveller?" />
+        <Entry x:Name="QuantityEntry" Text="1" Keyboard="Numeric" />
+
+        <Button Text="Add to Cart" Clicked="OnAddToCartClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
