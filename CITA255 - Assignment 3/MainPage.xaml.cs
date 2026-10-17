@@ -1,31 +1,28 @@
-﻿namespace CITA255___Assignment_3
+namespace CITA255___Assignment_3
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
+            ProductList.ItemsSource = Products.Names;
         }
 
-        // make each button go to details for item
-        private async void OnManaClicked(object? sender, EventArgs e)
+        private async void OnProductSelected(object? sender, SelectionChangedEventArgs e)
         {
-            await Navigation.PushAsync(new ManaPotionPage());
-        }
+     
+            if (e.CurrentSelection.Count == 0)
+            {
+                return;
+            }
 
-        private async void OnHealthClicked(object? sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new HealthPotionPage());
-        }
+            string selectedName = (string)e.CurrentSelection[0];
+            int index = Products.Names.IndexOf(selectedName);
 
-        private async void OnStaminaClicked(object? sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new StaminaPotionPage());
-        }
+    
+            ProductList.SelectedItem = null;
 
-        private async void OnSightClicked(object? sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SightPotionPage());
+            await Shell.Current.GoToAsync($"product?index={index}");
         }
     }
 }

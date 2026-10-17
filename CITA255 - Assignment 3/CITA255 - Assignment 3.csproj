@@ -70,40 +70,4 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Compile Update="ManaPotionPage.xaml.cs">
-	    <DependentUpon>ManaPotionPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="HealthPotionPage.xaml.cs">
-	    <DependentUpon>HealthPotionPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Checkout.xaml.cs">
-	    <DependentUpon>Checkout.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="SightPotionPage.xaml.cs">
-	    <DependentUpon>SightPotionPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="StaminaPotionPage.xaml.cs">
-	    <DependentUpon>StaminaPotionPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="ManaPotionPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="HealthPotionPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Checkout.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="SightPotionPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="StaminaPotionPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
-
 </Project>

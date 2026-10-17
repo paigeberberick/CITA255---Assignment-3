@@ -1,18 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="CITA255___Assignment_3.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Store">
 
-    <VerticalStackLayout Padding="20" Spacing="15">
+    <Grid RowDefinitions="Auto,*" Padding="25" RowSpacing="15">
 
-        <Label Text="Potion Shop" FontSize="28" />
+        <Label Grid.Row="0" Text="Sylvia's Potion Shop" Style="{StaticResource HeadingLabel}" />
 
-        <Button x:Name="ManaBtn" Text="Mana Potion - $14.99" Clicked="OnManaClicked" />
-        <Button x:Name="HealthBtn" Text="Health Potion - $9.99" Clicked="OnHealthClicked" />
-        <Button x:Name="StaminaBtn" Text="Stamina Potion - $11.50" Clicked="OnStaminaClicked" />
-        <Button x:Name="SightBtn" Text="Sight Enhancer Potion - $24.99" Clicked="OnSightClicked" />
+        <CollectionView
+            x:Name="ProductList"
+            Grid.Row="1"
+            SelectionMode="Single"
+            SelectionChanged="OnProductSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="x:String">
+                    <Label Text="{Binding .}" FontSize="22" Padding="15" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

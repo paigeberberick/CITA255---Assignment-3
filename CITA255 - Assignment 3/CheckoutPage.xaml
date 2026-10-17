@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CITA255___Assignment_3.CheckoutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Checkout">
+
+    <Grid RowDefinitions="Auto,Auto,*,Auto,Auto" Padding="25" RowSpacing="15">
+
+        <Label Grid.Row="0" Text="Your haul!" Style="{StaticResource HeadingLabel}" />
+
+        <Label
+            x:Name="EmptyLabel"
+            Grid.Row="1"
+            Text="Nothing yet, pick something out!."
+            Style="{StaticResource MutedLabel}" />
+
+        <CollectionView x:Name="CartList" Grid.Row="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="x:String">
+                    <Label Text="{Binding .}" FontSize="22" Padding="0,5" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label
+            x:Name="TotalLabel"
+            Grid.Row="3"
+            Text="Total:  $0.00"
+            FontSize="30"
+            HorizontalOptions="End" />
+
+        <Button
+            Grid.Row="4"
+            Text="Checkout"
+            Style="{StaticResource PrimaryButton}"
+            Clicked="OnCheckoutClicked" />
+
+    </Grid>
+</ContentPage>

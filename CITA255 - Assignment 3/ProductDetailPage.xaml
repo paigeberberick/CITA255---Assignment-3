@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CITA255___Assignment_3.ProductDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <VerticalStackLayout Padding="25" Spacing="15">
+
+        <Label x:Name="NameLabel" Style="{StaticResource HeadingLabel}" />
+        <Label x:Name="PriceLabel" Style="{StaticResource PriceLabel}" />
+        <Label x:Name="StockLabel" FontSize="20" />
+
+        <Label Text="Quantity" Style="{StaticResource MutedLabel}" />
+        <Entry x:Name="QuantityEntry" Text="1" Keyboard="Numeric" />
+
+        <Button
+            x:Name="AddBtn"
+            Text="Take for your journey...?"
+            Style="{StaticResource PrimaryButton}"
+            Clicked="OnAddToCartClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
