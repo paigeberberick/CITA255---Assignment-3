@@ -49,13 +49,6 @@ namespace CITA255___Assignment_3
                 return;
             }
 
-           
-            if (Products.InStock[productIndex] == false)
-            {
-                await DisplayAlertAsync("Out of Stock", "Sorry, we're all out of that!", "Got it!");
-                return;
-            }
-
           
             Cart.Names.Add(Products.Names[productIndex]);
             Cart.Prices.Add(Products.Prices[productIndex]);
